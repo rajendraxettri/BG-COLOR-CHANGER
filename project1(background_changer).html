@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project 1</title>
+    <style>
+
+
+        body{
+          text-align: center;
+        }
+        .button{
+
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 20px;
+            box-shadow: 0 0 0 2px rgba(218,102,123,1), 8px 8px 0 0 rgba(218,102,123,1);
+            cursor: pointer;
+        
+        }
+
+        .boxs{
+            display: flex;
+            justify-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1>Welcome to Color Changer !</h1>
+
+      
+<div class="boxs">
+        <div class="button" id="gray" style="background-color: grey;"></div>
+        <div class="button" id="green" style="background-color: green;"></div>
+        <div class="button" id="blue" style="background-color: blue;"></div>
+        <div class="button" id="red" style="background-color: red;"></div>
+    </div>
+
+
+    <h2>Pik a color from box to change background color !</h2>
+     
+
+    </div>
+    
+</body>
+
+
+<script>
+    const buttons = document.querySelectorAll('.button')
+const body = document.querySelector("body")
+
+
+buttons.forEach(function(button){
+    console.log(button);
+    button.addEventListener('click', function(e){
+console.log(e)
+console.log(e.target)
+
+if(e.target.id == 'gray'){
+    body.style.backgroundColor = e.target.id;
+}
+else if(e.target.id == 'red'){
+    body.style.backgroundColor = e.target.id;
+}
+else if (e.target.id == 'blue'){
+    body.style.backgroundColor = e.target.id;
+
+}else if(e.target.id == 'green'){
+    body.style.backgroundColor = e.target.id;
+
+}
+
+
+
+    })
+})
+   
+</script>
+</html>
